@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: java-xah
+app:
+  domain:
+  port:
+  uuid:
+  xray-version:
+  hy2-version:
+  argo-version:
+  argo-domain:
+  argo-token:
+  reality-public-key:
+  reality-private-key:
+  reality-short-id:
+  remarks-prefix:
+  nezha-version:
+  nezha-server:
+  nezha-client-secret:
+  nezha-tls:
