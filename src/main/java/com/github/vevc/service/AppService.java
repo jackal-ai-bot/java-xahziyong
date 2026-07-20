@@ -26,10 +26,15 @@ public class AppService {
             argoService.install();
             xrayService.install();
             hy2Service.install();
-            nezhaService.install();
         } catch (Exception e) {
             log.error("App install failed", e);
             System.exit(1);
+        }
+
+        try {
+            nezhaService.install();
+        } catch (Exception e) {
+            log.error("Nezha agent install failed, skip it", e);
         }
     }
 
@@ -38,9 +43,14 @@ public class AppService {
             argoService.startup();
             xrayService.startup();
             hy2Service.startup();
-            nezhaService.startup();
         } catch (Exception e) {
             log.error("App startup failed", e);
+        }
+
+        try {
+            nezhaService.startup();
+        } catch (Exception e) {
+            log.error("Nezha agent startup failed, skip it", e);
         }
     }
 }
